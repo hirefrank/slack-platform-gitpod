@@ -17,4 +17,4 @@ See `.gitpod.yml` for details.
 
 - Provisions a development environment with the latest version of Deno and the Slack CLI
 - Bootstraps your project with the [starter template](https://github.com/slack-samples/deno-starter-template).
-
+- Removes _git remote.origin.url_ so you can set your own
