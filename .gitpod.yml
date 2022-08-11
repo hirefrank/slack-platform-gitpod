@@ -1,0 +1,23 @@
+# Learn more about this file at https://www.gitpod.io/docs/references/gitpod-yml
+image:
+  file: .gitpod.Dockerfile
+
+# List the start up tasks. https://www.gitpod.io/docs/config-start-tasks/
+tasks:
+    # always check to make sure we're running the latest version
+  - init: deno upgrade && slack --version && slack upgrade
+    
+    # remove git origin if template repo
+    # auth if you aren't already authenticated
+    # bootstrap repo with starter project 
+    # run slack cloud if project exists
+    command: |
+      [ `git config --get remote.origin.url` == 'https://github.com/hirefrank/slack-platform-gitpod.git' ] && git remote rm origin
+      [ ! -f "/home/gitpod/manifest.ts" ] && slack create starter-app -t slack-samples/deno-starter-template ; echo -e "\n\n---\n$(cat README.md)" > README.md >> starter-app/README.md ; shopt -s dotglob ; mv -f starter-app/* . ; rm -rf starter-app/ 
+      [ ! -f "/home/gitpod/.slack/credentials.json" ] && slack auth login
+      [ -f "/home/gitpod/slack.json" ] && slack cloud run
+
+# https://www.gitpod.io/docs/ides-and-editors/vscode-extensions
+vscode:
+  extensions:
+    - denoland.vscode-deno
