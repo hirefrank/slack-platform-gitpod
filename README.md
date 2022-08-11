@@ -1,6 +1,6 @@
 # Slack's Next Generation Platform on Gitpod
 
-This repo is the fastest way to get up on Slack's Next Generation Platform using Gitpod. Within seconds, have an environement for developing on Slack running VS Code in your browser.
+This repo is the fastest way to get up running on Slack's Next Generation Platform using Gitpod. Within seconds, have an environment for developing on Slack running VS Code in your browser.
 
 ## Prerequisites
 
