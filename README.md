@@ -5,7 +5,7 @@ This repo is the fastest way to get up running on Slack's Next Generation Platfo
 ## Prerequisites
 
 - [Gitpod account](https://gitpod.io/) (their [free plan](https://www.gitpod.io/pricing) is very generous!)
-- Access to [Slack's Next Generation](http://api.slack.com/future) - DM [@hirefrank](https://twitter.com/hirefrank) for access.
+- Access to [Slack's Next Generation](http://api.slack.com/future) - ~DM [@hirefrank](https://twitter.com/hirefrank) for access~ Generally available in all paid plans.
 
 ## Get started
 
